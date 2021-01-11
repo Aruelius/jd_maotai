@@ -13,7 +13,7 @@ class Maotai(object):
         self.buy_time = "2021-01-11 09:59:59.500"
         self.run_time = 5 # 分钟
         # 打开 https://order.jd.com/center/list.action
-        # F12 控制台输入 console.log(_JdJrTdRiskFpInfo, _JdEid, document.cookie)
+        # F12 控制台输入 console.log(_JdJrTdRiskFpInfo, _JdEid)
         self.cookie = ""
         self.eid = ""
         self._JdJrTdRiskFpInfo = ""
