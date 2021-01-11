@@ -13,20 +13,20 @@ pip install requests
 ## 使用方法
 1. 浏览器打开：https://order.jd.com/center/list.action
 2. 没登录就登录
-3. F12 控制台 console 栏输入 console.log(_JdJrTdRiskFpInfo, _JdEid, document.cookie)
+3. F12 控制台 console 栏输入 console.log(_JdJrTdRiskFpInfo, _JdEid)
 4. 参数依次对应：
 ```
 _JdJrTdRiskFpInfo => self._JdJrTdRiskFpInfo
 _JdEid => self.eid
-document.cookie => self.cookie
 ```
-5. 将获取的到的值按照上述对应关系，填入脚本中
-6. 修改抢购时间`self.buy_time`
-7. 运行脚本
+5. 点击 F12 控制台 network 栏，刷新页面，找到 https://order.jd.com/center/list.action 的请求记录，把 Request Headers 里面 `cookie` 的值填到脚本里的 `self.cookie` 去
+6. 将获取的到的值按照上述对应关系，填入脚本中
+7. 修改抢购时间`self.buy_time`
+8. 运行脚本
 ```
 python main.py
 ```
-8. 不出意外的话，你会收获这些信息，太难了...
+9. 不出意外的话，你会收获这些信息，太难了...
 ```
 {'errorMessage': '很遗憾没有抢到，再接再厉哦。', 'orderId': 0, 'resultCode': 90016, 'skuId': 0, 'success': False}
 {'errorMessage': '很遗憾没有抢到，再接再厉哦。', 'orderId': 0, 'resultCode': 90016, 'skuId': 0, 'success': False}
